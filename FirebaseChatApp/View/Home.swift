@@ -7,10 +7,11 @@
 
 import SwiftUI
 struct Home: View {
+    @AppStorage("current_user") var User = ""
     @StateObject var homeData = HomeModel()
     var body: some View {
         VStack{
-            Text("Home")
+            Text("Home\(User)")
         }
         .onAppear(perform: {
         

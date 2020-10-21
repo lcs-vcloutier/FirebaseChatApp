@@ -12,6 +12,11 @@ class HomeModel: ObservableObject{
     
     @Published var msgs : [MsgModel] = []
     @AppStorage("current_user") var user = ""
+    let ref = Firestore.firestore()
+
+    init() {
+            readAllMsgs()
+        }
     
     func onAppear(){
         
@@ -52,5 +57,32 @@ class HomeModel: ObservableObject{
         alert.addAction(join)
         
         return alert
+    }
+    
+    func readAllMsgs(){
+        
+        ref.collection("Msgs").order(by: "timeStamp", descending: false).addSnapshotListener { (snap, err) in
+            
+            if err != nil{
+                print(err!.localizedDescription)
+                return
+            }
+            
+            guard let data = snap else{return}
+            
+            data.documentChanges.forEach { (doc) in
+                
+                // adding when data is added...
+                
+                if doc.type == .added{
+                    
+                    let msg = try! doc.document.data(as: MsgModel.self)!
+                    
+                    DispatchQueue.main.async {
+                        self.msgs.append(msg)
+                    }
+                }
+            }
+        }
     }
 }

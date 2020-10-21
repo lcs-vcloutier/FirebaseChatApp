@@ -11,7 +11,11 @@ struct Home: View {
     @StateObject var homeData = HomeModel()
     var body: some View {
         VStack{
-            Text("Home\(User)")
+            ScrollView{
+                ForEach(homeData.msgs){msg in
+                    
+                }
+            }
         }
         .onAppear(perform: {
         

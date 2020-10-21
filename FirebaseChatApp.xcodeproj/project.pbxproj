@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5CE0DD25409F0D00C1F154 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE0DC25409F0D00C1F154 /* ChatRow.swift */; };
 		2AE606FF253FB610001A46B6 /* FirebaseChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE606FE253FB610001A46B6 /* FirebaseChatAppApp.swift */; };
 		2AE60701253FB610001A46B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE60700253FB610001A46B6 /* ContentView.swift */; };
 		2AE60703253FB62E001A46B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE60702253FB62E001A46B6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		01A5722CA57179E402D667BF /* Pods-FirebaseChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChatApp.release.xcconfig"; path = "Target Support Files/Pods-FirebaseChatApp/Pods-FirebaseChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		2A5CE0DC25409F0D00C1F154 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		2AE606FB253FB610001A46B6 /* FirebaseChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE606FE253FB610001A46B6 /* FirebaseChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseChatAppApp.swift; sourceTree = "<group>"; };
 		2AE60700253FB610001A46B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				2AE60725253FC445001A46B6 /* Home.swift */,
+				2A5CE0DC25409F0D00C1F154 /* ChatRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				2AE6072C253FD0BE001A46B6 /* MsgModel.swift in Sources */,
 				2AE60701253FB610001A46B6 /* ContentView.swift in Sources */,
 				2AE60726253FC445001A46B6 /* Home.swift in Sources */,
+				2A5CE0DD25409F0D00C1F154 /* ChatRow.swift in Sources */,
 				2AE606FF253FB610001A46B6 /* FirebaseChatAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

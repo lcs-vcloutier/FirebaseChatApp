@@ -7,13 +7,15 @@
 
 import SwiftUI
 struct Home: View {
-    @StateObject var
+    @StateObject var homeData = HomeModel()
     var body: some View {
         VStack{
             Text("Home")
         }
-        .onAppear(perform: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        .onAppear(perform: {
         
+            homeData.onAppear()
+        })
     }
 }
 

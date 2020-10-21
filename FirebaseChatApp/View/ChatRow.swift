@@ -5,6 +5,7 @@
 //  Created by Cloutier, Vincent on 2020-10-21.
 //
 
+
 import SwiftUI
 
 struct ChatRow: View {
@@ -14,7 +15,7 @@ struct ChatRow: View {
         
         HStack(spacing: 15){
             
-            // NickName View
+            // NickName View...
             
             if chatData.user != user{
                 
@@ -30,6 +31,8 @@ struct ChatRow: View {
                     .foregroundColor(.white)
                     .padding()
                     .background(Color("Color"))
+                // Custom Shape...
+                    .clipShape(ChatBubble(myMsg: chatData.user == user))
                 
                 Text(chatData.timeStamp,style: .time)
                     .font(.caption2)
@@ -38,12 +41,15 @@ struct ChatRow: View {
             })
             
             if chatData.user == user{
-                 
+                
                 NickName(name: chatData.user)
             }
             
             if chatData.user != user{Spacer(minLength: 0)}
         }
+        .padding(.horizontal)
+        // For SCroll Reader....
+        .id(chatData.id)
     }
 }
 
@@ -60,7 +66,7 @@ struct NickName : View {
             .frame(width: 50, height: 50)
             .background((name == user ? Color.blue : Color.green).opacity(0.5))
             .clipShape(Circle())
-            // Context menu For Name Display
+            // COntext menu For Name Display...
             .contentShape(Circle())
             .contextMenu{
                 

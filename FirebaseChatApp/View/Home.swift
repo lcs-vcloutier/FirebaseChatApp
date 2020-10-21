@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 struct Home: View {
+    @StateObject var
     var body: some View {
         VStack{
             Text("Home")
